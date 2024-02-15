@@ -3,20 +3,20 @@ quick actions (macOS) så jag kan högerklicka i Finder för att push:a
 valfri fil, samt för att ta bort. Repot är statiskt och heter:\
 \~/gits/tumme (men använder \$HOME i scripten eftersom de har svårt med
 tilde)\
-\
+
 **Push:**\
-\
+
 Skapa filen \~/.gitpushconfig, som innehåller din gh-token, och inget
 annat\
-\
+
 1. Öppna Automator\
-\
+
 2. Quick Action\
-\
+
 3. Run shell script\
 ---------------------------------------\
 #!/bin/bash\
-\
+
 \# Your existing setup\
 GITUSERNAME=\"ulfschack\"\
 TOKEN=\$(\<\"\$HOME/.gitpushconfig\")\
@@ -38,7 +38,7 @@ git push https://\$TOKEN@github.com/\$GITUSERNAME/\$REPO_NAME.git main
 \# Eka url:en\
 echo \"https://\$GITUSERNAME.github.io/\$REPO_NAME/\$FILE_NAME\"\
 ---------------------------------------------------\
-\
+
 4. Run apple script\
 ------------------------------------------------------\
 on run {input, parameters}\
@@ -48,12 +48,12 @@ end tell\
 return input\
 end run\
 ------------------------------------------------------\
-\
+
 \
 **Remove**:\
 \
 Samma som för push, fast med denna kod\
-\
+
 1. Run shell Script\
 ---------------------------------------------------\
 GITUSERNAME=\"ulfschack\"\
@@ -76,10 +76,10 @@ done\
 \
 echo \"Selected files removed from \$REPO_NAME.\"\
 ------------------------------------------------------\
-\
+
 2. Run Apple Script\
 \
 ----------------------------------------------------------\
 (Samma)\
 ---------------------------------------------------------\
-\
+
