@@ -15,7 +15,7 @@ annat\
 
 3. Run shell script\
 ---------------------------------------\
-#!/bin/bash\
+#!/bin/bash
 
 \# Your existing setup\
 GITUSERNAME=\"ulfschack\"\
@@ -49,9 +49,9 @@ return input\
 end run\
 ------------------------------------------------------\
 
-\
+
 **Remove**:\
-\
+
 Samma som för push, fast med denna kod\
 
 1. Run shell Script\
@@ -78,7 +78,7 @@ echo \"Selected files removed from \$REPO_NAME.\"\
 ------------------------------------------------------\
 
 2. Run Apple Script\
-\
+
 ----------------------------------------------------------\
 (Samma)\
 ---------------------------------------------------------\
