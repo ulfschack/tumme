@@ -9,15 +9,15 @@ tilde)\
 Skapa filen \~/.gitpushconfig, som innehåller din gh-token, och inget
 annat\
 
-1. Öppna Automator\
+1. Öppna Automator
 
-2. Quick Action\
+2. Quick Action
 
-3. Run shell script\
+3. Run shell script
 ---------------------------------------\
-#!/bin/bash
+\#!/bin/bash
 
-\# Your existing setup\
+\# Your existing setup
 GITUSERNAME=\"ulfschack\"\
 TOKEN=\$(\<\"\$HOME/.gitpushconfig\")\
 FILE_PATH=\$1\
@@ -37,25 +37,25 @@ git push https://\$TOKEN@github.com/\$GITUSERNAME/\$REPO_NAME.git main
 \
 \# Eka url:en\
 echo \"https://\$GITUSERNAME.github.io/\$REPO_NAME/\$FILE_NAME\"\
----------------------------------------------------\
+---------------------------------------------------
 
 4. Run apple script\
-------------------------------------------------------\
+------------------------------------------------------
 on run {input, parameters}\
 tell application \"System Events\"\
 display dialog input as string buttons {\"OK\"} default button \"OK\"\
 end tell\
 return input\
 end run\
-------------------------------------------------------\
+------------------------------------------------------
 
 
-**Remove**:\
+**Remove**:
 
-Samma som för push, fast med denna kod\
+Samma som för push, fast med denna kod
 
 1. Run shell Script\
----------------------------------------------------\
+---------------------------------------------------
 GITUSERNAME=\"ulfschack\"\
 REPO_NAME=\"tumme\"\
 TOKEN=\$(\<\"\$HOME/.gitpushconfig\")\
@@ -75,11 +75,11 @@ git push https://\$TOKEN@github.com/\$GITUSERNAME/\$REPO_NAME.git main
 done\
 \
 echo \"Selected files removed from \$REPO_NAME.\"\
-------------------------------------------------------\
+------------------------------------------------------
 
 2. Run Apple Script\
 
-----------------------------------------------------------\
-(Samma)\
----------------------------------------------------------\
+----------------------------------------------------------
+(Samma)
+---------------------------------------------------------
 
